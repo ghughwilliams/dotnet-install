@@ -21,7 +21,7 @@ dotnet-install.asc:
 		printf '$(RED)Bad fingerprint. Exiting$(RESET)\n' >&2; \
 		exit 1; \
 	fi
-	@printf '$(YELLOW)Signing key verified; importing...$(RESET)\n'
+	@printf '$(YELLOW)Signing key verified; importing to local keystore...$(RESET)\n'
 	$(GPG) --import dotnet-install.asc
 	@touch $@
 
