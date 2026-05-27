@@ -1,0 +1,11 @@
+.DS_Store
+.claude/
+
+# downloaded files
+dotnet-install.asc
+dotnet-install.sh
+dotnet-install.sig
+
+# stamp files
+.key-imported
+.signature-verified
