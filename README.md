@@ -1,6 +1,6 @@
 # dotnet-install
 
-Installs .NET on macOS or Linux using the official `dotnet-install.sh` script, with GPG signature verification before execution.
+Installs .NET on macOS or Linux using the official [`dotnet-install.sh`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script) script, with GPG signature verification before execution.
 
 ## Usage
 
@@ -27,6 +27,8 @@ Before execution, the installer script is verified against the signing key with 
 ```
 
 This fingerprint was confirmed against the [official Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script) and [dotnet/install-scripts#276](https://github.com/dotnet/install-scripts/issues/276) (retrieved 2026-05-27). If Microsoft rotates the signing key, the `EXPECTED_FPR` variable in the Makefile will need to be updated.
+
+The signing key is imported into a project-local keystore (`.gnupg/`) and does not affect your personal GPG keyring.
 
 ## Post-install
 
